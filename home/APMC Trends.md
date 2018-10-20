@@ -69,8 +69,12 @@ For testing stationarity, I have considered three methods
 Time series and stationarity test are done with the help of an illustrative example:
 
 Suppose we consider only those APMC/commodity combinations with enough data to constitute a time series from which we can identify seasonality trends. To illustrate I have used the time series of bajri prices in sangamner APMC.
+
+
 ![](Images/bajri_prices.png)
 ![Results of stationarity test](Images/testresults1.png)
+
+
 Eyeballing the plot we cannot comment much on trend and seasonality but by Dickey-Fuller test our ADF Statistic value is less than 10% critical value, which means we are assured of that our series is 90% stationary. On further analyzing we p-value of the test is also more than 0.05, thus this indicates that there is some non-stationarity present in it.
 
 ### MAKING THE TIME SERIES STATIONARY
