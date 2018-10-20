@@ -50,8 +50,8 @@ The Initial data preprocessing is done by removing all non-alphanumeric characte
 Outliers are treated using the standard statistical procedure, wherein all values not within the 25th to 75th percentile in the interquartile ranges are removed. Although different percentile range can be chosen. This is done after the data has been grouped by commodity, so as to be sensitive to the price of different commodities. For example, the normal price of commodity A may be much higher than that of commodity B, so the outlier detection must be performed as per individual commodity price range. 
 
 Showing below two figures of the modal price of 'wheathusked' with and without outliers.
-![](../Images/wheathusked_with_outliers.png)
-![](../Images/wheathusked_without_outliers.png)
+![](Images/wheathusked_with_outliers.png)
+![](Images/wheathusked_without_outliers.png)
 
 ### TIME SERIES &amp; TESTING STATIONARITY
 **Statistical stationarity**: A stationary time series is one whose statistical properties such as mean, variance, autocorrelation, etc. are all constant over time.
@@ -71,8 +71,8 @@ Time series and stationarity test are done with the help of an illustrative exam
 Suppose we consider only those APMC/commodity combinations with enough data to constitute a time series from which we can identify seasonality trends. To illustrate I have used the time series of bajri prices in sangamner APMC.
 
 
-![](../Images/bajri_prices.png)
-![Results of stationarity test](../Images/testresults1.png)
+![](Images/bajri_prices.png)
+![Results of stationarity test](Images/testresults1.png)
 
 
 Eyeballing the plot we cannot comment much on trend and seasonality but by Dickey-Fuller test our ADF Statistic value is less than 10% critical value, which means we are assured of that our series is 90% stationary. On further analyzing we p-value of the test is also more than 0.05, thus this indicates that there is some non-stationarity present in it.
@@ -89,16 +89,16 @@ Model both trend and seasonality, then remove them from the time series.
 
 
 Below are the results of an additive model of seasonal decomposition
-![](../Images/Original.png)
-![](../Images/Trend.png)
-![](../Images/seasonal.png)
-![](../Images/residual.png)
+![](Images/Original.png)
+![](Images/Trend.png)
+![](Images/seasonal.png)
+![](Images/residual.png)
 
 
 Remove the trend and seasonality from the Time series and now we can use the residual values. On checking stationarity, we get ADF Statistic: -6.767319 which is less than 1% critical value.
 
 
-![Results of stationarity test](../Images/testresults2.png)
+![Results of stationarity test](Images/testresults2.png)
 
 
 This is stationary because:
@@ -137,7 +137,7 @@ After finding optimal parameters we will obtain modal fitted values according to
 
 Finally, for our third objective, we will load MSP data from the CSV, group them by commodity, resample them by each month and plot it with our modal fit values and our original time series.
 
-![](../Images/mspVSmandi.png)
+![](Images/mspVSmandi.png)
 
 
 ### POINTS TO NOTE:
