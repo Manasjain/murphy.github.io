@@ -12,7 +12,7 @@ All the trends analysis is done using jupyter notebook and python libraries.
 ### Installation
 
 #### Jupyter lab
-- The easiest way to install Jupyter Notebook and other Ml libraries is using [Conda](https://conda.io/docs/), which is the package manager that the [Anaconda](http://docs.continuum.io/anaconda/) distribution is built upon.
+The easiest way to install Jupyter Notebook and other Ml libraries is using [Conda](https://conda.io/docs/), which is the package manager that the [Anaconda](http://docs.continuum.io/anaconda/) distribution is built upon.
 Check your conda version after completing the installation.
 ```
 $ conda -V
