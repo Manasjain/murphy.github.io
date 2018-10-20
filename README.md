@@ -6,12 +6,13 @@ Understanding trends in APMC (Agricultural produce market committee)/mandi price
 - Detect seasonality type (multiplicative or additive) for each cluster of APMC and commodities
 - De-seasonalise prices for each commodity and APMC according to the detected seasonality type
 - Compare prices in APMC/Mandi with MSP(Minimum Support Price)- raw and deseasonalized
+
 ## Getting Started
 All the trends analysis is done using jupyter notebook and python libraries.
 
 ### Installation
 
-#### Jupyter lab
+**Jupyter Notebook**
 The easiest way to install Jupyter Notebook and other Ml libraries is using [Conda](https://conda.io/docs/), which is the package manager that the [Anaconda](http://docs.continuum.io/anaconda/) distribution is built upon.
 Check your conda version after completing the installation.
 ```
@@ -75,11 +76,10 @@ Suppose we consider only those APMC/commodity combinations with enough data to c
 ![Results of stationarity test](Images/testresults1.png)
 
 
-Eyeballing the plot we cannot comment much on trend and seasonality but by Dickey-Fuller test our ADF Statistic value is less than 10% critical value, which means we are assured of that our series is 90% stationary. On further analyzing we p-value of the test is also more than 0.05, thus this indicates that there is some non-stationarity present in it.
+Eye-balling the plot we cannot comment much on trend and seasonality but by Dickey-Fuller test our ADF Statistic value is less than 10% critical value, which means we are assured of that our series is 90% stationary. On further analyzing we p-value of the test is also more than 0.05, thus this indicates that there is some non-stationarity present in it.
 
 ### MAKING THE TIME SERIES STATIONARY
 - Reducing trend using moving average:
-
 We can reduce the trend in a time series by taking a log of it then subtract the rolling mean of the series. This gives much better results on the Dickey-Fuller test.
 
 - Reducing Seasonality along with Trend using Decomposing :
@@ -88,7 +88,7 @@ Model both trend and seasonality, then remove them from the time series.
     - Multiplicative model: In a multiplicative time series, the components multiply together to make the time series.If you have an increasing trend, the amplitude of seasonal activity increases. Everything becomes more exaggerated.
 
 
-Below are the results of an additive model of seasonal decomposition
+Below are the results of an additive model of decomposition
 ![](Images/Original.png)
 ![](Images/Trend.png)
 ![](Images/seasonal.png)
